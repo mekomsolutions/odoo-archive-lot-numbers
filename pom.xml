@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.ozonehis</groupId>
+    <artifactId>odoo-archive-lot-numbers</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>Odoo Archive Lot Numbers</name>
+    <description>
+        Adds active field to stock lot numbers to add support for archiving
+    </description>
+
+    <organization>
+        <name>Ozone HIS</name>
+        <url>http://www.ozone-his.com</url>
+    </organization>
+    <developers>
+        <developer>
+            <name>Mekom Solutions</name>
+            <url>http://www.mekomsolutions.com</url>
+        </developer>
+    </developers>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <scm>
+        <connection>scm:git:git@github.com:ozone-his/odoo-archive-lot-numbers.git</connection>
+        <developerConnection>scm:git:git@github.com:ozone-his/odoo-archive-lot-numbers.git</developerConnection>
+        <url>https://github.com/ozone-his/odoo-archive-lot-numbers.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>3.7.1</version>
+                    <executions>
+                        <execution>
+                            <id>package-addon</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                            <configuration>
+                                <appendAssemblyId>false</appendAssemblyId>
+                                <descriptors>
+                                    <descriptor>assembly.xml</descriptor>
+                                </descriptors>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <distributionManagement>
+        <repository>
+            <id>mks-nexus-private-releases</id>
+            <name>Mekom Solutions Nexus repo</name>
+            <url>https://nexus.mekomsolutions.net/repository/maven-private-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>mks-nexus-private-snapshots</id>
+            <name>Mekom Solutions Nexus repo for snapshots</name>
+            <url>https://nexus.mekomsolutions.net/repository/maven-private-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
