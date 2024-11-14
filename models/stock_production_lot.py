@@ -2,7 +2,7 @@ from odoo import fields, models
 
 
 class CustomProductionLot(models.Model):
-    _name = 'stock.production.lot'
+    _inherit = 'stock.production.lot'
 
     x_active = fields.Boolean(
         default=True,
