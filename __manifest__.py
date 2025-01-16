@@ -5,7 +5,7 @@
     "author": (
         "Mekom Solutions"
     ),
-    "website": "https://github.com/ozone-his/odoo-archive-lot-numbers",
+    "website": "https://github.com/mekomsolutions/odoo-archive-lot-numbers",
     "summary": "Adds x_active field to inventory lot numbers to add support for archiving",
     "depends": ["stock"],
     "data": [],
