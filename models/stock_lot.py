@@ -1,7 +1,7 @@
 from odoo import fields, models
 
 
-class CustomProductionLot(models.Model):
+class CustomStockLot(models.Model):
     _inherit = 'stock.lot'
 
     x_active = fields.Boolean(
